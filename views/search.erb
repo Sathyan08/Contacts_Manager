@@ -1,0 +1,16 @@
+<ul>
+  <% if @error_messages.length > 0 %>
+      <% @error_messages.each do |message|%>
+      <li><%= message%></li>
+        <% end %>
+    <% end %>
+</ul>
+
+<form action ="/search" method="post">
+  <label for="first_name">First Name</label>
+    <input type="text" id="first_name" name="first_name" value="<%= @first_name %>" /><br>
+
+  <label for="article_url">Last Name</label>
+    <input type="text" id="last_name" name="last_name" value="<%= @last_name %>" /><br>
+    <input type="submit" />
+</form>

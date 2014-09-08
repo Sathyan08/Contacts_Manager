@@ -1,0 +1,19 @@
+<ul>
+  <% if @error_messages.length > 0 %>
+      <% @error_messages.each do |message|%>
+      <li><%= message%></li>
+        <% end %>
+    <% end %>
+</ul>
+
+<form action ="/submit" method="post">
+  <label for="first_name">First Name</label>
+    <input type="text" id="first_name" name="first_name" value="<%= @first_name %>" /><br>
+
+  <label for="last_name">Last Name</label>
+    <input type="text" id="last_name" name="last_name" value="<%= @last_name %>" /><br>
+
+  <label for="phone_number">Phone Number</label>
+    <input type="text" id="last_name" name="phone_number" value="<%= @phone_number %>" /><br>
+    <input type="submit" />
+</form>
